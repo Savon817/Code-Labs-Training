@@ -1,0 +1,44 @@
+********CLOSURES*******
+
+function outer(){
+	 some constant variable;
+	functin inner(){
+		console log "some string", some constant variable;
+		return "inner return value";
+	}
+
+	return inner(); //anything after this return will not be executed.
+};
+
+const outerRes = outer();
+console.log(outerRes);
+
+-----------------------------------------------------------------------------------------------------------------------------
+//Create a function that calls another function
+function greeting(greeting){
+	return function(name){
+		return `${name}! ${greeting} `
+	}
+}
+
+//creating variable that calls the greeting function passing in a generic variable
+const variable = greeting("Welcome");
+const otherVariable = greeting("So glad to see you");
+
+//Call the variable passing in the name (used for the second parameter callback function)
+console.log("variable: ", variable("some name");
+console.log("otherVariable: ", otherVariable("some other name");
+
+-------------------------------------------------------------------------------------------------------------------------------
+const create bank accout = initialBalance =>{
+	//
+	let userBalance = initialBalance;
+	
+	//return an object that use this variable
+	return{
+		
+	
+	}
+}
+
+********OBJECTS**********
