@@ -1,0 +1,17 @@
+For this exercise we are trying to understand closures.
+For example here is the code:
+function numGenerator() {
+    
+    let num = 10;
+    function checkNumber(){
+        console.log(num);
+    }
+    num++
+    return checkNumber;
+}
+
+let number = numGenerator();
+number();
+
+By the end we want to know what will number() output to the console.
+My answer is that it'll output a number and that number is 11 
