@@ -1,0 +1,2 @@
+Before is executed the code I did some inspection and suspected
+that it'll out put -80. 
