@@ -1,0 +1,14 @@
+From my understanding this assignment is that even though the variable hello was
+defined after the anonymous function it can still be used by the function because before
+the anonymous function executed the hello variable was already defined in the scope.
+function sayHi(){
+    let say = function(){
+        console.log(hello);
+    }
+
+    let hello = "Hello world!";
+    return say;
+}
+
+let sayHiClosure = sayHi();
+sayHiClosure();
