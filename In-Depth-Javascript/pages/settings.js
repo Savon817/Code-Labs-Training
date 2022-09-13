@@ -1,12 +1,12 @@
-export default class Settings{
-    constructor(){
+export default class Settings {
+    constructor() {
         this.render();
     }
 
-    render(){
+    render() {
         let appElem = document.getElementById("app");
-        appElem.innerHTML += `
-            <h1 class='text-center'>Settings</h1>
-        `
+
+        appElem.insertAdjacentHTML('beforeend', `<h1 class='text-center'>Settings</h1>`)
+
     }
 }
