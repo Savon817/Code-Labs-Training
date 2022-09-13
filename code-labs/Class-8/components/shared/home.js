@@ -6,7 +6,7 @@ export default class Home{
     render(){
         let appElem = document.getElementById('app');
 
-        appElem.innerHTML = `
+        appElem.innerHTML += `
         
         `
     }
