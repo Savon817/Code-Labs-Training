@@ -12,3 +12,4 @@ class User{
 
 let adam = new User("adam", 30);
 console.log(adam);
+console.log(`Hey my name is ${adam.name} and I am ${adam.age} years old`);
