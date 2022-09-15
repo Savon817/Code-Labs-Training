@@ -1,0 +1,4 @@
+Advantages of TypeScript as compared to JavaScript
+*Highlights errors at compilation time unlike javascript does at runtime
+*provides benefits of optional static typing: TS types can be added to variables, functions, properties, etc
+* TS's editor plugins provide one of the best IDE developer experience
