@@ -9,3 +9,4 @@ var User = /** @class */ (function () {
 }());
 var adam = new User("adam", 30);
 console.log(adam);
+console.log("Hey my name is ".concat(adam.name, " and I am ").concat(adam.age, " years old"));

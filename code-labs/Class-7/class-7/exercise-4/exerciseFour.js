@@ -1,7 +1,7 @@
 function redundantReturn(someString = "Hello"){
 
     function realFunction(){
-        return redundantReturn(console.log(someString));
+        return someString;
     }
 
     // let realFunc = function (someString) {
@@ -13,5 +13,4 @@ function redundantReturn(someString = "Hello"){
 }
 
 let stringFunction = redundantReturn();
-
-stringFunction();
+console.log(stringFunction());

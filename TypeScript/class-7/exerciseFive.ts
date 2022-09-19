@@ -1,4 +1,4 @@
-function parentCallback(x){
+function parentCallback(x: string){
     return function closure(){
         return x;
     };
