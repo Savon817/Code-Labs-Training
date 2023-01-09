@@ -1,0 +1,115 @@
+# this_is_a_snake_cased_file.rb
+
+# #Assigning a variable
+# forty_two = 42
+
+# #Defining a method
+# def this_is_a_great_method
+#     #do stuff
+# end
+
+# #Constant declarations
+# FOUR = 'four'
+# FIVE = 5
+
+# #Addition
+# 1 + 1 #=> 2
+
+# #Substraction
+# 2 - 1 #=> 1
+
+# #Multiplication
+# 2 * 2 #=> 4
+
+# #Division
+# 10/5 #=> 2
+
+# #Exponent
+# 2 ** 2 #=> 4
+# 3 ** 4 #=> 81
+
+# #Modulus (find the remainder of division)
+# 8 % 2 #=> 0 (8 / 2 = 4; no remainder)
+# 10 % 4 #=> 2 (10 / 4 = 2 with a remainder o
+
+#Integers and floats
+# puts 17 / 5 #=> 3, not 3.4
+# puts 17 / 5.0 #=> 3.4
+
+#Converting number types
+# To convert an integer to a float:
+# puts 13.to_f #=> 13.0
+
+# To convert a float to an integer:
+# puts 13.0.to_i #=> 13
+# puts 13.9.to_i #=> 13
+
+#Concatenation
+# # With the plus operator:
+# "Welcome " + "to " + "Odin!"    #=> "Welcome to Odin!"
+
+# # With the shovel operator:
+# "Welcome " << "to " << "Odin!"  #=> "Welcome to Odin!"
+
+# # With the concat method:
+# "Welcome ".concat("to ").concat("Odin!")  #=> "Welcome to Odin!"
+
+name = 'Odin'
+
+#For string interpolation be sure to use double quotes
+# puts "Hello, #{name}" 
+# puts 'Hello, #{name}'
+
+
+#-----COMMON STRING METHODS --------------------------------
+# Capitalize
+puts "hello".capitalize #=> "Hello"
+
+# include?
+puts "hello".include?("lo") #=> true
+puts "hello".include?("z") #=> false
+
+# upcase
+puts "hello".upcase #=> "HELLO"
+
+# downcase
+puts "Hello".downcase #=> "hello"
+
+# empty?
+puts "hello".empty? #=> "false"
+puts "".empty? #=> "true"
+
+# length
+puts "hello".length #=> 5
+
+# reverse
+puts "hello".reverse #=> "olleh"
+
+# split
+puts "hello world".split #=> ["hello", "world"] Doesn't put them in an array but prints them out normally
+puts "hello".split("") #=> ['h', 'e', 'l', 'l', 'o'] ^same as the above statement
+
+# strip
+puts "hello, world    ".strip #=> "hello, world"
+
+puts "he77o".sub("7", "l")           #=> "hel7o"
+
+puts "he77o".gsub("7", "l")          #=> "hello"
+
+puts "hello".insert(-1, " dude")     #=> "hello dude"
+
+puts "hello world".delete("l")       #=> "heo word"
+
+puts "!".prepend("hello, ", "world") #=> "hello, world!"
+
+# converting other objects to strings
+puts 5.to_s #=> "5"
+puts nil.to_s #=> ""
+puts :symbol.to_s #=> "symbol"
+
+#Symbols
+:my_symbol
+
+puts "string" == "string"  #=> true
+puts "string".object_id == "string".object_id #=> false
+puts :symbol.object_id == :symbol.object_id #=> true
