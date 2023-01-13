@@ -12,4 +12,4 @@ puts new_ary.at(2)
 
 #3 Clear method
 clr_ary = new_ary.clear
-puts clr_ary.empty?
+puts "#{clr_ary}"
