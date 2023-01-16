@@ -5,8 +5,8 @@ require_relative "lib/covid_tracker/version"
 Gem::Specification.new do |spec|
   spec.name = "covid_tracker"
   spec.version = CovidTracker::VERSION
-  spec.authors = ["TODO: Write your name"]
-  spec.email = ["TODO: Write your email address"]
+  spec.authors = ["Savon Willams"]
+  spec.email = ["savo0817@live.com"]
 
   spec.summary = ""
   spec.description = ""
