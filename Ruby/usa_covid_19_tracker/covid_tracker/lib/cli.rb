@@ -24,7 +24,7 @@ class CLI
        #ask the user which one does he/she want?
        puts "Which one do you prefer?"
        input = gets.chomp
-        choose_option(input)
+       choose_option(input)
        return input
     end
 
