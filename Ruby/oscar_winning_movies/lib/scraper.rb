@@ -7,7 +7,7 @@ class Scraper
     
     def self.scrape_movies(year)
         doc = Nokogiri::HTML(URI.open("https://www.scrapethissite.com/pages/ajax-javascript/?ajax=true&year=#{year}"))
-        binding.pry
+        # binding.pry
         movies_list = JSON.parse(doc.text)
 
         movies_list.each do |movie|
@@ -15,3 +15,5 @@ class Scraper
         end
     end
 end
+
+Scraper.scrape_movies(2014)
