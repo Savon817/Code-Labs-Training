@@ -1,0 +1,4 @@
+require_relative '../lib/oscar_winning_movies.rb'
+
+
+CLI.new.run
