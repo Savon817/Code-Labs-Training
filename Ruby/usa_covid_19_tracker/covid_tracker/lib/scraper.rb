@@ -34,7 +34,6 @@ class Scraper
             if name != "District Of Columbia"
                 State.new(name, cases, deaths, recoveries)
             end
-            
         end
 
         # input = gets.chomp
