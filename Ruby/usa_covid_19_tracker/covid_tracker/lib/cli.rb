@@ -74,6 +74,7 @@ class CLI
     end
 
     def menu
+        puts "---------------------------------------"
        #list options
        list_options
        
