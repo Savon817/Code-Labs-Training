@@ -71,17 +71,19 @@ class CLI
                 i += 1
             end
         when "4"
-            puts "Guess a country from this random capital"
+            puts "Guess the country from this random capital"
             user_cap = nil
             countries = Country.all
             rand_capital = countries.sample
             puts "Type stop to cancel the game"
             i = 0
             while user_cap != 'stop' && i < 1 do
-                puts "What country do this capital (#{rand_capital.capital}) belong to: "
+                puts "What country does this capital (#{rand_capital.capital}) belong to: "
                 user_cap = gets.chomp
-                if user_cap == rand_capital.capital
+                if user_cap == rand_capital.name
                     puts "Correct!"
+                else
+                    puts "Sorry, that was incorrect :("
                 end
                 i += 1
             end
