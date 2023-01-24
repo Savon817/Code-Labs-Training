@@ -44,7 +44,7 @@ class CLI
                 select_country.name == user_pick
             end
             sleep(2)
-            puts "Here's #{user_pick}'s info!!! \nCountry Capital: #{country[0].name} \nCountry population: #{country[0].population} \nCountry Size: #{country[0].area} km^2"
+            puts "Here's #{user_pick}'s info!!! \nCountry Capital: #{country[0].capital} \nCountry population: #{country[0].population} \nCountry Size: #{country[0].area} km^2"
         when "2"
             sleep(3)
             countries = Country.all.sort_by{|country| -country.population}
