@@ -62,7 +62,7 @@ class CLI
                 puts "Try to guess #{rand_country.name}'s population:"
                 user_guess = gets.chomp 
                 if user_guess.to_i == rand_country.population
-                    puts "WHAT!!! How? No Way, are you a wizard! You got the right answer!"
+                    puts "WHAT!!! How? No Way, are you a wizard? You got the right answer!"
                 elsif user_guess.to_i.between?(rand_country.population-50000, rand_country.population+50000)
                     puts "Close but I'll allow it! Good Guess! Your answer was #{user_guess} and the real population is #{rand_country.population}"
                 else
