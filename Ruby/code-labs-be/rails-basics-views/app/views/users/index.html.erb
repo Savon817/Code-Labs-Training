@@ -1,0 +1,22 @@
+<!-- render values onto the webpage -->
+
+<%= {username: 'amy123'}[:username] %>
+
+
+<!-- Execute Ruby code -->
+<!-- conditionals -->
+<!-- loops -->
+<!-- helper methods - create forms/links elements -->
+<!-- looks the same as above but without the equals sign -->
+
+<% if false %>
+    <p>This is true</p>
+<% else %>
+    <p>Actually, this was false</p>
+<%  end %>
+
+<% [{username: 'john123'}, {username: 'amy123'}].map do |user|%>
+    <%= user[:username]%>
+<% end %>
+
+<%= link_to "Navigate to the about path", about_us_path %>
