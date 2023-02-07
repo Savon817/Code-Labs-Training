@@ -16,8 +16,8 @@
             <td>
                 <p>
                     <%= link_to "Show", post_path(post) %> | 
-                    Edit | 
-                    Delete
+                    <%= link_to "Edit", edit_post_path(post) %> | 
+                    <%= button_to "Delete", post_path(post), method: :delete %>
                 </p>
             </td>
         </tr>

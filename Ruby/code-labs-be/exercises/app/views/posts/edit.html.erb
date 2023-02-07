@@ -1,0 +1,19 @@
+<h1>You can edit <%= @post.title%> here!</h1>
+
+<%= form_with(model: @post) do |form| %>
+    <div>
+        <h3><%= form.label "Title:", style: "display: block" %></h3>
+        <%= form.text_field :title %>
+    </div>
+
+    <div>
+        <h3><%= form.label "Body:", style: "display: block" %></h3>
+        <%= form.text_area :body %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
+
+<%= link_to "Go back to the posts", posts_path %>
