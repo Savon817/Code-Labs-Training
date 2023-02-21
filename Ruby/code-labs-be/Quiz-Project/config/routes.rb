@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get '/sign-up', to: 'users#new'
+  post '/users', to: 'users#create'
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
 end
