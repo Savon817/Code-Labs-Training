@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_20_202235) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_21_003933) do
   create_table "questions", force: :cascade do |t|
     t.string "prompt"
     t.string "user_answer"
@@ -36,6 +36,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_20_202235) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
   add_foreign_key "questions", "quizzes", column: "quizzes_id"
