@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     end
 
     def create
-        @user = Users.find_by(username: params[:username])
+        @user = User.find_by(email: params[:email])
 
         if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
@@ -17,5 +17,11 @@ class SessionsController < ApplicationController
     
     def show
 
+    end
+
+    def destroy
+        session[:user_id] = nil
+        flash[:notice] = "Logged out!"
+        # redirect_to root_path
     end
 end
