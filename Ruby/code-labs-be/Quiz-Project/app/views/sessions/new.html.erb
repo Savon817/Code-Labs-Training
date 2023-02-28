@@ -1,11 +1,11 @@
 <div class="container">
     <div class="row" style="justify-content: center;">
         <%= form_with(model: @user) do |form|%>
-            <div class="col">
+            <div class="col" id="emailGroup">
                 <%= form.label :email, for: "emailInput" %>
                 <%= form.text_field :email, id: "emailInput", class: "form-control", placeholder: "Please Enter Your Email!" %>
             </div>
-            <div class="col">
+            <div class="col" id="passwordGroup">
                 <%= form.label :password, for: "passwordInput" %>
                 <%= form.text_field :password, id: "passwordInput", class: "form-control", placeholder: "Please Enter Your Password!" %>
             </div>
