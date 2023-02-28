@@ -1,13 +1,17 @@
-<%= form_with(model: @user) do |form|%>
-    <div>
-        <%= form.label :email %>
-        <%= form.text_field :email %>
+<div class="container">
+    <div class="row" style="justify-content: center;">
+        <%= form_with(model: @user) do |form|%>
+            <div class="col">
+                <%= form.label :email, for: "emailInput" %>
+                <%= form.text_field :email, id: "emailInput", class: "form-control", placeholder: "Please Enter Your Email!" %>
+            </div>
+            <div class="col">
+                <%= form.label :password, for: "passwordInput" %>
+                <%= form.text_field :password, id: "passwordInput", class: "form-control", placeholder: "Please Enter Your Password!" %>
+            </div>
+            <div>
+                <%= form.submit "Log In", class: "btn btn-primary" %>
+            </div>
+        <%end%>
     </div>
-    <div>
-        <%= form.label :password %>
-        <%= form.text_field :password %>
-    </div>
-    <div>
-        <%= form.submit "Log In" %>
-    </div>
-<%end%>
+</div>
