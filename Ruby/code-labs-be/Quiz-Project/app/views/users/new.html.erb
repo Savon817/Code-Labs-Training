@@ -1,17 +1,47 @@
-<%= form_with(model: @user) do |form| %>
-  <div>
-    <%= form.label :username %>
-    <%= form.text_field :username %>
+<section class="text-center container">
+
+  <div class="p-5 bg-image" style="
+            background-image: url(<%= image_path "quiz-time.jpg" %>); 
+            height: 300px;" ></div>
+
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+          margin-top: -100px;
+          background: hsla(0, 0%, 100%, 0.8);
+          backdrop-filter: blur(30px);
+          ">
+      
+      <%= render partial: 'errors', locals: {user: @user} %>
+
+      <div class="card-body py-5 px-md-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-5">Sign up now</h2>
+              <%= form_with(model: @user) do |form| %>
+                <div>
+                  <div>
+                    <%= form.label :username %>
+                    <%= form.text_field :username, class: "form-control" %>      
+                  </div>
+                </div>
+
+                <div>
+                  <div class="form-outline mb-4">
+                    <%= form.label :email %>
+                    <%= form.text_field :email, class: "form-control", type: "email" %>
+                  </div>
+                </div>
+                <div>
+                  <div class="form-outline mb-4">
+                    <%= form.label :password %>
+                    <%= form.password_field :password, class: "form-control", type: "password" %>
+                  </div>
+                </div>
+                <div>
+                  <%= form.submit "Sign Up", class: "btn btn-primary btn-block mb-4"%>
+                </div>
+              <% end %>
+          </div>
+        </div>
+      </div>
   </div>
-  <div>
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-    <div>
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
-  <div>
-    <%= form.submit "Sign Up"%>
-  </div>
-<% end %>
+</section>

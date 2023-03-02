@@ -12,9 +12,6 @@
 
   <body>
     <%= render 'shared/nav' %>
-    <% if flash[:message] %>
-      <%= flash[:message] %>
-    <% end %>
     <%= yield %>
   </body>
 </html>

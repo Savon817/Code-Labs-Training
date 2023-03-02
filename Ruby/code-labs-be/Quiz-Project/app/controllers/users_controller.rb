@@ -11,7 +11,7 @@ class UsersController < ApplicationController
             redirect_to login_path
         else
             flash[:message] = "There was a problem with signing you up."
-            render :new
+            render :new, status: :unprocessable_entity
         end       
     end
 
