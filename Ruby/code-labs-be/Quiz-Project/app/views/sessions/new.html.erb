@@ -1,17 +1,38 @@
-<div class="container">
-    <div class="row" style="justify-content: center;">
-        <%= form_with(model: @user) do |form|%>
-            <div class="col" id="emailGroup">
-                <%= form.label :email, for: "emailInput" %>
-                <%= form.text_field :email, id: "emailInput", class: "form-control", placeholder: "Please Enter Your Email!" %>
-            </div>
-            <div class="col" id="passwordGroup">
-                <%= form.label :password, for: "passwordInput" %>
-                <%= form.text_field :password, id: "passwordInput", class: "form-control", placeholder: "Please Enter Your Password!" %>
-            </div>
-            <div>
-                <%= form.submit "Log In", class: "btn btn-primary" %>
-            </div>
-        <%end%>
-    </div>
-</div>
+<section class="text-center container">
+
+  <div class="p-5 bg-image" style="
+            background-image: url(<%= image_path "quiz-time.jpg" %>); 
+            height: 300px;" ></div>
+
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+          margin-top: -100px;
+          background: hsla(0, 0%, 100%, 0.8);
+          backdrop-filter: blur(30px);
+          ">
+      
+
+      <div class="card-body py-5 px-md-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-5">Log in here!</h2>
+                <%= form_with(model: @user) do |form|%>
+                    <div class="col" id="emailGroup">
+                        <%= form.label :email, for: "emailInput" %>
+                        <%= form.text_field :email, id: "emailInput", class: "form-control", placeholder: "Please Enter Your Email!", type: "email" %>
+                    </div>
+                    <div class="col" id="passwordGroup">
+                        <%= form.label :password, for: "passwordInput" %>
+                        <%= form.text_field :password, id: "passwordInput", class: "form-control", placeholder: "Please Enter Your Password!", type:"password"%>
+                    </div>
+                    <div>
+                        <%= form.submit "Log In", class: "btn btn-primary" %>
+                    </div>
+                    <div>
+                        <p class="mb-0"><%= link_to "If you don't have an account sign up here", sign_up_path%></p>
+                    </div>
+                <%end%>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
