@@ -3,6 +3,10 @@ class QuizzesController < ApplicationController
         @quizzes = Quiz.all
     end
 
+    def new
+        @quiz = Quiz.new
+    end
+
     private
         def set_quiz
             @quiz = Quiz.find(params[:id])
