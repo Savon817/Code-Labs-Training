@@ -1,0 +1,15 @@
+<div class="container">
+    <%= form_with(model: product) do |form|%>
+        <div>
+            <%= form.label :title %>
+            <%= form.text_field :title %>
+        </div>
+        <div>
+            <%= form.label :description %>
+            <%= form.text_area :description %>
+        </div>
+        
+
+        <%= form.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+</div>
