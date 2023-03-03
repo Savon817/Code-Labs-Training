@@ -8,7 +8,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             flash[:message] = "You have successfully signed up!"
-            redirect_to login_path
+            redirect_to quizzes_path
         else
             flash[:message] = "There was a problem with signing you up."
             render :new, status: :unprocessable_entity
