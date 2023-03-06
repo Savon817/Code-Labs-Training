@@ -1,10 +1,10 @@
 class SessionsController < ApplicationController
 
     def create
-        @users = User.find_by(email: params[:email])
+        @user = User.find_by(email: params[:email])
 
-        if @users && @users.authenticate(params[:password])
-            session[:users_id] = @users.id
+        if @user && @user.authenticate(params[:password])
+            session[:user_id] = @user.id
             flash[:notice] = "Successfully Logged in!"
             redirect_to quizzes_path, notice: "Logged in" # Subject to change
         else
@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-        session[:users_id] = nil
+        session[:user_id] = nil
         flash[:notice] = "Logged out!"
         redirect_to quizzes_path # Subject to change/ or not 
     end

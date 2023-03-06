@@ -1,8 +1,12 @@
 class QuizzesController < ApplicationController
+    before_action :set_quiz, only: [:show, :edit, :update, :destroy]
 
     # Get - Show the quizzes
     def index
         @quizzes = Quiz.all
+    end
+
+    def show
     end
 
     # Get - form to create a quiz
@@ -22,12 +26,23 @@ class QuizzesController < ApplicationController
         end
     end
 
-    def show
-        @quiz = set_quiz
-    end
 
     def edit
-        @quiz = set_quiz
+    end
+
+    def update
+
+        if @quiz.update(quiz_params)
+            redirect_to quizzes_path
+        else
+            render :edit, status: :unprocessable_entity
+        end
+    end
+
+    def destroy
+        @quiz.destroy
+        flash[:notice] = "The quiz has been destroyed"
+        render redirect_to quizzes_path
     end
 
 
