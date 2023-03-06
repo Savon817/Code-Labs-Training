@@ -1,0 +1,12 @@
+<%= form_with(model: question, url: quiz_questions_path(@quiz)) do |form|%>
+
+    <h3>
+        <%= form.label :prompt %>
+        <%= form.text_field :prompt %>
+    </h3>
+
+    <div>
+        
+    </div>
+
+<% end %>
