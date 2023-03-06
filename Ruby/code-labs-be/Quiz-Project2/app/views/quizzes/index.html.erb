@@ -1,0 +1,7 @@
+<h1>Quizzes</h1>
+
+<% @quizzes.each do |quiz| %>
+    <h2><%= quiz.title %></h2>
+    <p> Description: <%= quiz.description %></p>
+    <div><%= link_to "Click here to view Quiz", quiz_path(quiz)%></div>
+<% end %>
