@@ -7,4 +7,5 @@
 
     <p><%= @quiz.description%></p>
     <%= link_to "Click here to edit Quiz", edit_quiz_path(@quiz)%>
+    <%= button_to "Delete Quiz", @quiz, method: :delete, class:"btn btn-danger"%>
 </div>

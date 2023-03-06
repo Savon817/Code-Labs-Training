@@ -42,7 +42,7 @@ class QuizzesController < ApplicationController
     def destroy
         @quiz.destroy
         flash[:notice] = "The quiz has been destroyed"
-        render redirect_to quizzes_path
+        redirect_to quizzes_path
     end
 
 
