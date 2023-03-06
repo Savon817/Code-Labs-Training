@@ -1,5 +1,6 @@
 <div>
-    <%= form_with(model: quiz) do |form|%>
+    <%= form_with(model: @quiz) do |form|%>
+        <h3>Quiz Details</h3>
         <div>
             <%= form.label :title %>
             <%= form.text_field :title %>
@@ -9,7 +10,16 @@
             <%= form.text_area :description %>
         </div>
         
+        <h3>Quiz Questions</h3>
+        <% form.fields_for :questions do |question|%>
 
-        <%= form.submit "Make Quiz", class: "btn btn-primary" %>
+        <% end %>
+
+        <div>
+            <%= form.button "+", class: "btn btn-info btn-sm"%>
+        </div>
+        
+
+        <%= form.submit class: "btn btn-primary btn-lg" %>
     <% end %>
 </div>

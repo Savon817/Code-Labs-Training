@@ -1,6 +1,17 @@
 <div id="<%= dom_id quiz %>">
 
-
+    <div class="card" style="margin-top: 10px;">
+        <div class="card-body" style="color: black;">
+            <h5 class="card-title">
+                <%= quiz.title %>
+            </h5>
+            <p class="card-text">
+                <%= quiz.description %>
+            </p>
+            <p>Made by <strong><%= quiz.user.username %></strong></p>
+            <%= link_to "Display Quiz", quiz, class:"btn btn-primary"%>
+        </div>
+    </div>
 
     
 </div>

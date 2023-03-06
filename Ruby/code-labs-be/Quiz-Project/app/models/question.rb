@@ -1,4 +1,4 @@
 class Question < ApplicationRecord
-  belongs_to :quizzes
+  belongs_to :quiz
   serialize :possible_answers, Array
 end
