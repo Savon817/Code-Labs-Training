@@ -2,9 +2,10 @@
     <h1 id="forFontColor">Quizzes</h1>
 
     <div id="quizzes">
-        <% @quizzes.each do |quiz|%>
-            <p>
-            </p>
+        <%= @quizzes.each do |quiz|%>
+            <%= render quiz %>
+            <p><%= link_to "Display this Quiz", quiz %></p>
         <% end %>
     </div>
+    <%= link_to "Make A New Quiz", new_quiz_path%>
 </div>
